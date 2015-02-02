@@ -14,6 +14,10 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		SuperHero hero = new SuperHero ("Wig of Wam");
+		hero.showAbilites();
+		hero.generateRandomPowers();
+		hero.fight();
 
 	}
 

@@ -7,33 +7,33 @@
  * due February 6th
  * date modified:  February 2
  */
-import java.util.ArrayList;
 import java.util.Random;
 
 public class SuperHero extends Hero {
-
+//constructor
 	public SuperHero(String name) {
 		super(name);
 		System.out.println("picking powers");
 		generateRandomPowers();
 		
 	}
-
+//create String array in which we have 6 abilities, then generate a random number that chooses each at random
 	public void generateRandomPowers(){
-		Random powerChoice = new Random();
-		String[]superPowers = new String[6];
+		String[]superPowers = new String[]{
+				"Super Speed",
+				"Super Strength",
+				"Stone SKin",
+				"Flight",
+				"Pyrokenisis",
+				"Weather Control"};
+	
 		
-		for (int i=0; i<superPowers.length; i++){
-			superPowers[1] = "Super Speed";
-			superPowers[2] = "Super Strength";
-			superPowers[3] = "Stone Skin";
-			superPowers[4] = "Flight";
-			superPowers[5] = "Pyrokenisis";
-			superPowers[6] = "Weather Control";
+		System.out.println("Picking powers...");
+		
+		for (String s: superPowers){
+			System.out.printf("|%s|", s);
+			System.out.println();
 		}
-		
-		System.out.println("picking powers");
-		System.out.println(superPowers);
 	}
 	
 
