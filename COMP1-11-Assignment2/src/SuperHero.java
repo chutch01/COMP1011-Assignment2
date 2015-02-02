@@ -7,6 +7,10 @@
  * due February 6th
  * date modified:  February 2
  */
+
+import java.util.ArrayList;
+
+
 public class SuperHero extends Hero {
 //private variables
 	private int powerChoice;
@@ -18,36 +22,34 @@ public class SuperHero extends Hero {
 //constructor
 	public SuperHero(String name) {
 		super(name);
-		generateRandomPowers();
+		
 		
 	}
 //create String array in which we have 6 abilities, then generate a random number that chooses each at random
-	private void generateRandomPowers(){
-		
-		//string array
-		String[]superPowers = new String[]{
-				"Super Speed",
-				"Super Strength",
-				"Stone SKin",
-				"Flight",
-				"Pyrokenisis",
-				"Weather Control"};
 	
+	public void generateRandomPowers(){
+		
+		//create ArrayList of super powers
+		ArrayList<String> superPowers = new ArrayList<String>();
+				superPowers.add("Super Speed");
+				superPowers.add("Super Strength");
+				superPowers.add("Stone Skin");
+				superPowers.add("Flight");
+				superPowers.add("Pyrokenisis");
+				superPowers.add("Weather Control");
+		
 		
 		//System.out.println("Picking powers...");
 		//generate a random number, pick that super power from the array and delete it, do it three times
-		for(int i=0; i >=2; i++){
-			this.powerChoice = (int)Math.random()*5;
+		for(int i=0; i <=2; i++){
+			this.powerChoice = (int)(Math.random() *4);
 			System.out.println("Power to be deleted: " +powerChoice);
+			superPowers.remove(this.powerChoice);
 			
 		}
 		//print the remaining super powers as the super powers that we want
 		System.out.println("Powers+++++++++++++");
-		for (String s: superPowers){
-			
-			System.out.printf("|%s|", s);
-			System.out.println();
-		}
+		System.out.println(superPowers);
 	}
 	
 
