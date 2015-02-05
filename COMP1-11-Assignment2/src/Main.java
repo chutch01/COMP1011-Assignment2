@@ -16,7 +16,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		SuperHero hero = new SuperHero ("Wig of Wam");
 		hero.showAbilites();
-		hero.generateRandomPowers();
+		hero.showPowers();
 		hero.fight();
 
 	}

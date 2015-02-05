@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class SuperHero extends Hero {
 //private variables
 	private int powerChoice;
+	private ArrayList<String> superPowers = new ArrayList<String>();
 	
 	
 	
@@ -22,15 +23,15 @@ public class SuperHero extends Hero {
 //constructor
 	public SuperHero(String name) {
 		super(name);
-		
+		generateRandomPowers();
 		
 	}
 //create String array in which we have 6 abilities, then generate a random number that chooses each at random
 	
-	public void generateRandomPowers(){
+	private void generateRandomPowers(){
 		
 		//create ArrayList of super powers
-		ArrayList<String> superPowers = new ArrayList<String>();
+		
 				superPowers.add("Super Speed");
 				superPowers.add("Super Strength");
 				superPowers.add("Stone Skin");
@@ -42,12 +43,17 @@ public class SuperHero extends Hero {
 		//System.out.println("Picking powers...");
 		//generate a random number, pick that super power from the array and delete it, do it three times
 		for(int i=0; i <=2; i++){
-			this.powerChoice = (int)(Math.random() *4);
-			System.out.println("Power to be deleted: " +powerChoice);
+			this.powerChoice = (int)(Math.random() *superPowers.size());
+			//System.out.println("Power to be deleted: " +powerChoice);
 			superPowers.remove(this.powerChoice);
 			
 		}
 		//print the remaining super powers as the super powers that we want
+		//System.out.println("Powers+++++++++++++");
+		//System.out.println(superPowers);
+	}
+	
+	public void showPowers(){
 		System.out.println("Powers+++++++++++++");
 		System.out.println(superPowers);
 	}
