@@ -5,7 +5,7 @@
  * @version:0.1
  * Assignment 2 Worth 5%
  * due February 6th
- * date modified:  February 2
+ * date modified:  February 5
  */
 public class Main {
 
@@ -13,7 +13,7 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		//initialize the superHero and initialize the methods
 		SuperHero hero = new SuperHero ("Wig of Wam");
 		hero.showAbilites();
 		hero.showPowers();

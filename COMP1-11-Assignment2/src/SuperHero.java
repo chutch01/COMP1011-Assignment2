@@ -5,9 +5,8 @@
  * @version:0.1
  * Assignment 2 Worth 5%
  * due February 6th
- * date modified:  February 2
+ * date modified:  February 5
  */
-
 import java.util.ArrayList;
 
 
@@ -39,7 +38,6 @@ public class SuperHero extends Hero {
 				superPowers.add("Pyrokenisis");
 				superPowers.add("Weather Control");
 		
-		
 		//System.out.println("Picking powers...");
 		//generate a random number, pick that super power from the array and delete it, do it three times
 		for(int i=0; i <=2; i++){
@@ -52,7 +50,7 @@ public class SuperHero extends Hero {
 		//System.out.println("Powers+++++++++++++");
 		//System.out.println(superPowers);
 	}
-	
+	//print the remaining super powers as the super powers that we want
 	public void showPowers(){
 		System.out.println("Powers+++++++++++++");
 		System.out.println(superPowers);
